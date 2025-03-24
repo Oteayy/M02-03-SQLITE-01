@@ -1,4 +1,5 @@
-from repositories import init_database
+from repositories import (init_database,
+                          create_project)
 
 def main():
     init_database()

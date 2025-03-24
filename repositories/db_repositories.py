@@ -1,5 +1,7 @@
 import sqlite3
 
+from constants.constants import DATABASE
+
 
 def init_database():
 
@@ -52,3 +54,33 @@ def init_database():
         
     except Exception as ex:
         print(f'Dogodila se greska {ex}.')
+        
+
+def create_project():
+    insert_project_statement = '''
+        INSERT INTO projects_name(name, begin_date, end_date)
+        VALUES(?, ?, ?)
+        '''
+    try:
+        # 1.KORAK Kreiranje konekcijež
+        with sqlite3.connect(DATABASE) as conn:
+        
+        # 2.KORAK Kreiranje Cursor objekta za rad s bazom(predstavlja nasu bazu)
+            cursor = conn.cursor()
+
+        # 3.KORAK Izvrsavanje SQL Query naredbi
+        cursor.execute(insert_project_statement, ('Project name', '2025-01-25', '2025-02-08'))
+            
+            # Pokreni postupak snimanja promjena u bazi!!!
+        conn.commit()
+
+        # 4.KORAK Zatvaranje konekcije na bazu - with automatski zatvara konekciju
+        # conn.close()
+        
+    except sqlite3.OperationalError as e:
+        print(f'Failed to open database: {e}')
+        
+    except Exception as ex:
+        print(f'Dogodila se greska {ex}.')
+def create_task():
+    pass
