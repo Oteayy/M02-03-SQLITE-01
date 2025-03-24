@@ -1,7 +1,7 @@
 from repositories import init_database
 
 def main():
-    init_database()
+    db_repo = DbRepository()
 # NASTAVAK izvrsavanje programa
 
 if __name__ == '__main__':

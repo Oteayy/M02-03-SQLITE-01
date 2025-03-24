@@ -1,1 +1,1 @@
-from repositories.db_repositories import init_database
+from repositories.db_repositories import DbReposiroty

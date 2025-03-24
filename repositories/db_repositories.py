@@ -3,7 +3,11 @@ from constants import (DATABASE,
                        CREATE_TABLE_PROJECTS, 
                         CREATE_TABLE_TASKS)
 
-
+class DbReposiroty:
+    def __init__(self):
+        self.create_tables_statements = []
+        self.init_database()
+        
 def init_database():
 
     create_tables_statements = [
