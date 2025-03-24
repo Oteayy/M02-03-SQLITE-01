@@ -1,5 +1,8 @@
-import sqlite3
+from repositories import init_database
 
-# 1.KORAK Kreiranje konekcijež
-conn = sqlite3.connect('')
-# 2.KORAK Kreiranje 
+def main():
+    init_database()
+# NASTAVAK izvrsavanje programa
+
+if __name__ == '__main__':
+    main()
