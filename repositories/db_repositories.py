@@ -106,11 +106,11 @@ def _get_from_db(statement, condition: Tuple = ()):
             else:
                 cursor.execute(statement)
 
-            projects = cursor.fetchall()
+            data_from_db = cursor.fetchall()
 
             # Vrati podatke koji su dohvaceni iz baze
-            if len(projects) > 0:
-                return projects
+            if len(data_from_db) > 0:
+                return data_from_db
             else:
                 return None
 

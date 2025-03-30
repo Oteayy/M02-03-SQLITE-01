@@ -5,3 +5,5 @@ from constants.constants import (DATABASE,
                                  GET_PROJECT,
                                  CREATE_TABLE_TASKS,
                                  CREATE_TASK)
+
+from constants.lengths import (NAME_LENGTH)
