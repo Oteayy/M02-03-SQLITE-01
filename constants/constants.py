@@ -1,7 +1,5 @@
 
-DATABASE = 'databases/projects0.db'
-
-
+DATABASE = 'databases/projects.db'
 
 CREATE_TABLE_PROJECTS = '''
         CREATE TABLE IF NOT EXISTS projects (
